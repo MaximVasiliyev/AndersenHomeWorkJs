@@ -36,7 +36,7 @@ function deepCopyObj(obj)
 	if (obj instanceof Array) { 
 		var copy = []; 
 		for (var i = 0, len = obj.length; i < len; i++) { 
-			copy[i] = obj[i]; 
+			copy[i] = deepCopyObj(obj[i]); 
 		} 
 	return copy; 
 	}
@@ -45,7 +45,7 @@ function deepCopyObj(obj)
 	{ 
 		var copy = {}; 
 		for (var attr in obj) { 
-			if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr]; 
+			if (obj.hasOwnProperty(attr)) copy[attr] = deepCopyObj(obj[attr]); 
 		} 
 	return copy; 
 	} 
