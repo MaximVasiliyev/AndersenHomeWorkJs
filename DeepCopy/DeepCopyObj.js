@@ -53,3 +53,6 @@ function deepCopyObj(obj)
 }
 
 var personOriginalCopy = deepCopyObj(personOriginal);
+
+personOriginal.address.geo.lat = "-47.3159";
+console.log(personOriginalCopy.address.geo.lat);
