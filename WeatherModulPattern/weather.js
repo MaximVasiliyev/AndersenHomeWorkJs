@@ -20,7 +20,6 @@ window.onload = function() {
     var searchButton = document.getElementById("searchButton");
     var tableHTML = "";
     var NOT_FOUND = 404;
-    var f = false;
     curDay.innerHTML = currentDayToString((new Date()).getDay());
 
     var weatherModule = (function() {      
